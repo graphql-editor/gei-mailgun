@@ -1,0 +1,15 @@
+
+
+type MessageQuery{
+	send(
+		to: String!
+		message: String!
+	): String
+}
+
+type Query{
+	messages: MessageQuery
+}
+schema{
+	query: Query
+}
