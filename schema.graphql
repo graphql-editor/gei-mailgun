@@ -1,15 +1,20 @@
 
 
-type MessageQuery{
-	send(
-		to: String!
-		message: String!
+type Mutation{
+	send(mailgunData: MailgunData!
 	): String
 }
 
 type Query{
-	messages: MessageQuery
+	version: String
+}
+
+input MailgunData{
+		to: String!
+		subject: String!
+		message: String!
 }
 schema{
-	query: Query
+	query: Query,
+	mutation: Mutation
 }

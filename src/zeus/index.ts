@@ -828,46 +828,68 @@ export type ScalarCoders = {
 type ZEUS_UNIONS = never
 
 export type ValueTypes = {
-    ["MessageQuery"]: AliasType<{
-send?: [{	to: string | Variable<any, string>,	message: string | Variable<any, string>},boolean | `@${string}`],
+    ["Mutation"]: AliasType<{
+send?: [{	mailgunData: ValueTypes["MailgunData"] | Variable<any, string>},boolean | `@${string}`],
 		__typename?: boolean | `@${string}`
 }>;
 	["Query"]: AliasType<{
-	messages?:ValueTypes["MessageQuery"],
+	version?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
-}>
+}>;
+	["MailgunData"]: {
+	to: string | Variable<any, string>,
+	subject: string | Variable<any, string>,
+	message: string | Variable<any, string>
+}
   }
 
 export type ResolverInputTypes = {
-    ["MessageQuery"]: AliasType<{
-send?: [{	to: string,	message: string},boolean | `@${string}`],
+    ["Mutation"]: AliasType<{
+send?: [{	mailgunData: ResolverInputTypes["MailgunData"]},boolean | `@${string}`],
 		__typename?: boolean | `@${string}`
 }>;
 	["Query"]: AliasType<{
-	messages?:ResolverInputTypes["MessageQuery"],
+	version?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
-}>
+}>;
+	["MailgunData"]: {
+	to: string,
+	subject: string,
+	message: string
+}
   }
 
 export type ModelTypes = {
-    ["MessageQuery"]: {
+    ["Mutation"]: {
 		send?: string | undefined
 };
 	["Query"]: {
-		messages?: ModelTypes["MessageQuery"] | undefined
+		version?: string | undefined
+};
+	["MailgunData"]: {
+	to: string,
+	subject: string,
+	message: string
 }
     }
 
 export type GraphQLTypes = {
-    ["MessageQuery"]: {
-	__typename: "MessageQuery",
+    ["Mutation"]: {
+	__typename: "Mutation",
 	send?: string | undefined
 };
 	["Query"]: {
 	__typename: "Query",
-	messages?: GraphQLTypes["MessageQuery"] | undefined
+	version?: string | undefined
+};
+	["MailgunData"]: {
+		to: string,
+	subject: string,
+	message: string
 }
     }
 
 
-type ZEUS_VARIABLES = {}
+type ZEUS_VARIABLES = {
+	["MailgunData"]: ValueTypes["MailgunData"];
+}

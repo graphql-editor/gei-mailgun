@@ -1,22 +1,26 @@
 /* eslint-disable */
 
 export const AllTypesProps: Record<string,any> = {
-	MessageQuery:{
+	Mutation:{
 		send:{
-
+			mailgunData:"MailgunData"
 		}
+	},
+	MailgunData:{
+
 	}
 }
 
 export const ReturnTypes: Record<string,any> = {
-	MessageQuery:{
+	Mutation:{
 		send:"String"
 	},
 	Query:{
-		messages:"MessageQuery"
+		version:"String"
 	}
 }
 
 export const Ops = {
-query: "Query" as const
+mutation: "Mutation" as const,
+	query: "Query" as const
 }
