@@ -1,0 +1,9 @@
+{
+  "resolvers": {
+    "Mutation.send": {
+      "resolve": {
+        "name": "lib/Mutation/send"
+      }
+    }
+  }
+}
