@@ -7,5 +7,7 @@
     "typingsDir": "./src",
     "backendSrc": "./src",
     "backendLib": "./lib",
-    "schemaDir": "./"
+    "schemaDir": "./",
+    "geiPath": "src/gei/gei.ts",
+    "integrationPath": "src/gei/integration.ts"
 }

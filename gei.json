@@ -1,0 +1,5 @@
+{
+  "ENV": {
+    "required": ["MAILGUN_API_KEY", "MAILGUN_DOMAIN", "MAILGUN_SENDER"]
+  }
+}
