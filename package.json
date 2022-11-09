@@ -1,6 +1,6 @@
 {
   "name": "gei-mailgun",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "GraphQL Editor integration for mailgun. Allows sending messages",
   "main": "index.js",
   "scripts": {
