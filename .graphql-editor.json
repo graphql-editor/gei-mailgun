@@ -9,5 +9,7 @@
     "backendLib": "./lib",
     "schemaDir": "./",
     "geiPath": "src/gei/gei.ts",
-    "integrationPath": "src/gei/integration.ts"
+    "integrationPath": "src/gei/integration.ts",
+    "registry": "https://registry.npmjs.org/",
+    "npmPackage": "gei-mailgun"
 }
