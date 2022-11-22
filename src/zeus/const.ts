@@ -4,6 +4,9 @@ export const AllTypesProps: Record<string,any> = {
 	Mutation:{
 		send:{
 			mailgunData:"MailgunData"
+		},
+		sendHTML:{
+			mailgunData:"MailgunData"
 		}
 	},
 	MailgunData:{
@@ -13,7 +16,8 @@ export const AllTypesProps: Record<string,any> = {
 
 export const ReturnTypes: Record<string,any> = {
 	Mutation:{
-		send:"String"
+		send:"String",
+		sendHTML:"String"
 	},
 	Query:{
 		version:"String"

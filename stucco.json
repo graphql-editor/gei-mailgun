@@ -1,12 +1,19 @@
 {
-    "resolvers": {
-        "Mutation.send": {
-            "name": "Send email message",
-            "description": "Send email message using mailgun",
-            "resolve": {
-                "name": "lib/Mutation/send"
-            },
-            "data": {}
-        }
+  "resolvers": {
+    "Mutation.send": {
+      "name": "Send email message",
+      "description": "Send email message using mailgun",
+      "resolve": {
+        "name": "lib/Mutation/send"
+      },
+      "data": {}
+    },
+    "Mutation.sendHTML": {
+      "name": "Send email message in HTML",
+      "description": "Send email message in HTML using mailgun",
+      "resolve": {
+        "name": "lib/Mutation/sendHTML"
+      }
     }
+  }
 }

@@ -830,6 +830,7 @@ type ZEUS_UNIONS = never
 export type ValueTypes = {
     ["Mutation"]: AliasType<{
 send?: [{	mailgunData: ValueTypes["MailgunData"] | Variable<any, string>},boolean | `@${string}`],
+sendHTML?: [{	mailgunData: ValueTypes["MailgunData"] | Variable<any, string>},boolean | `@${string}`],
 		__typename?: boolean | `@${string}`
 }>;
 	["Query"]: AliasType<{
@@ -846,6 +847,7 @@ send?: [{	mailgunData: ValueTypes["MailgunData"] | Variable<any, string>},boolea
 export type ResolverInputTypes = {
     ["Mutation"]: AliasType<{
 send?: [{	mailgunData: ResolverInputTypes["MailgunData"]},boolean | `@${string}`],
+sendHTML?: [{	mailgunData: ResolverInputTypes["MailgunData"]},boolean | `@${string}`],
 		__typename?: boolean | `@${string}`
 }>;
 	["Query"]: AliasType<{
@@ -861,7 +863,8 @@ send?: [{	mailgunData: ResolverInputTypes["MailgunData"]},boolean | `@${string}`
 
 export type ModelTypes = {
     ["Mutation"]: {
-		send?: string | undefined
+		send?: string | undefined,
+	sendHTML?: string | undefined
 };
 	["Query"]: {
 		version?: string | undefined
@@ -876,7 +879,8 @@ export type ModelTypes = {
 export type GraphQLTypes = {
     ["Mutation"]: {
 	__typename: "Mutation",
-	send?: string | undefined
+	send?: string | undefined,
+	sendHTML?: string | undefined
 };
 	["Query"]: {
 	__typename: "Query",

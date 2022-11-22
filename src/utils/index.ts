@@ -20,3 +20,11 @@ export const sendMessage = ({ message, to, subject }: GraphQLTypes['MailgunData'
     subject,
     text: message,
   });
+
+export const sendMessageHTML = ({ message, to, subject }: GraphQLTypes['MailgunData']) =>
+  mg.messages.create(domain, {
+    from,
+    to,
+    subject,
+    html: message,
+  });

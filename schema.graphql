@@ -3,6 +3,8 @@
 type Mutation{
 	send(mailgunData: MailgunData!
 	): String
+	sendHTML(mailgunData: MailgunData!
+	): String
 }
 
 type Query{
