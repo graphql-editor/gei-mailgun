@@ -840,7 +840,8 @@ sendHTML?: [{	mailgunData: ValueTypes["MailgunData"] | Variable<any, string>},bo
 	["MailgunData"]: {
 	to: string | Variable<any, string>,
 	subject: string | Variable<any, string>,
-	message: string | Variable<any, string>
+	message: string | Variable<any, string>,
+	from?: string | undefined | null | Variable<any, string>
 }
   }
 
@@ -857,7 +858,8 @@ sendHTML?: [{	mailgunData: ResolverInputTypes["MailgunData"]},boolean | `@${stri
 	["MailgunData"]: {
 	to: string,
 	subject: string,
-	message: string
+	message: string,
+	from?: string | undefined | null
 }
   }
 
@@ -872,7 +874,8 @@ export type ModelTypes = {
 	["MailgunData"]: {
 	to: string,
 	subject: string,
-	message: string
+	message: string,
+	from?: string | undefined
 }
     }
 
@@ -889,7 +892,8 @@ export type GraphQLTypes = {
 	["MailgunData"]: {
 		to: string,
 	subject: string,
-	message: string
+	message: string,
+	from?: string | undefined
 }
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "gei-mailgun",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "GraphQL Editor integration for mailgun. Allows sending messages",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "form-data": "^4.0.0",
     "mailgun.js": "^8.0.2",
     "node-fetch": "^2.6.0",
-    "stucco-js": "^0.10.4",
+    "stucco-js": "^0.10.12",
     "ws": "^8.11.0"
   }
 }

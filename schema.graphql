@@ -15,6 +15,7 @@ input MailgunData{
 		to: String!
 		subject: String!
 		message: String!
+		from: String
 }
 schema{
 	query: Query,

@@ -13,7 +13,8 @@
       "description": "Send email message in HTML using mailgun",
       "resolve": {
         "name": "lib/Mutation/sendHTML"
-      }
+      },
+      "data": {}
     }
   }
 }
