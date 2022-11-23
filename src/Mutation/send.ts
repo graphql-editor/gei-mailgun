@@ -3,4 +3,6 @@ import { sendMessage } from '../utils';
 import { resolverFor } from '../zeus';
 
 export const handler = async (input: FieldResolveInput) =>
-  resolverFor('Mutation', 'send', async (args) => sendMessage({ ...args.mailgunData }))(input.arguments);
+  resolverFor('Mutation', 'send', async (args) =>
+    sendMessage({ ...args.mailgunData, from: args.mailgunData.from || undefined }),
+  )(input.arguments);
